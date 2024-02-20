@@ -1,7 +1,20 @@
+import { Link } from "react-router-dom";
+import logo from "../../../assets/home/Logo_IntraSpark1.0-01.png";
+import Button from "../../../components/Button";
 const NavBar = () => {
   return (
-    <div>
-      <h1>This is NavBar component</h1>
+    <div className="navbar px-20 flex flex-col md:flex-row justify-center lg:justify-between">
+      <div className="mb-4">
+        <Link to="/">
+          <img className="w-full lg:w-48" src={logo} alt="IntraSpark Logo" />
+        </Link>
+      </div>
+
+      <div className="">
+        <Link>
+          <Button></Button>
+        </Link>
+      </div>
     </div>
   );
 };

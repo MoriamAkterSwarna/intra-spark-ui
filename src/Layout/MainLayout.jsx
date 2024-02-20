@@ -5,7 +5,7 @@ import NavBar from "../Pages/Shared/NavBar/NavBar";
 /* eslint-disable react/jsx-no-undef */
 const MainLayout = () => {
   return (
-    <div>
+    <div className="bg-gray-900 text-white">
       <NavBar></NavBar>
       <Outlet></Outlet>
       <Footer></Footer>
