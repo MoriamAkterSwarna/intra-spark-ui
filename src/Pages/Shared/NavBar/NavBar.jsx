@@ -10,7 +10,7 @@ const NavBar = () => {
         </Link>
       </div>
 
-      <div className="">
+      <div className=" mb-4 md:mb-1">
         <Link>
           <Button></Button>
         </Link>

@@ -7,6 +7,7 @@ const MainLayout = () => {
   return (
     <div className="bg-gray-900 text-white">
       <NavBar></NavBar>
+      {/* <TsParticles></TsParticles> */}
       <Outlet></Outlet>
       <Footer></Footer>
     </div>

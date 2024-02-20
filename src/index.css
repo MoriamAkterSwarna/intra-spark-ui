@@ -1,7 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.banner-bg {
-  /* background-image: ; */
+.banner-section {
+  background-image: url("./assets/home/pngtree-smart-robot-arm-advertising-background-backgroundrobotblue-backgrounddark-backgroundlightlight-image_68405.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  object-fit: cover;
+}
+.font-merri {
+  font-family: "Merriweather", serif;
+  font-style: normal;
 }

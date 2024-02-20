@@ -1,8 +1,17 @@
+import rotateImg from "../assets/home/output-onlinegiftools.gif";
+
+import logoImg from "../assets/home/Logo_IntraSpark1.0-01.png";
 const Banner = () => {
   return (
-    <div>
-      <h1>This is Banner component</h1>
-      <div className="w-full h-[100vh] opacity-80 banner-bg" alt="" />
+    <div className="banner-section h-[70vh] md:h-[90vh] w-[98.5vw]">
+      <div className="flex justify-center items-center z-10 relative opacity-100">
+        <img className=" relative" src={rotateImg} alt="" />
+
+        <div className="absolute top-[30%] font-merri text-center">
+          <img className="w-96" src={logoImg} alt="" />
+          <h4 className="text-2xl font-bold">Deadline: </h4>
+        </div>
+      </div>
     </div>
   );
 };
