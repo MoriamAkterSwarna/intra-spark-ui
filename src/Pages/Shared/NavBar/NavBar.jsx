@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../../assets/home/Logo_IntraSpark1.0-01.png";
+import logo from "../../../assets/home/Tran_Logo_IntraSpark1.0-01.png";
 import Button from "../../../components/Button";
 const NavBar = () => {
   return (
