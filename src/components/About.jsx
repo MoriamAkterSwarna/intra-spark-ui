@@ -1,14 +1,29 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/home/Tran_Logo_IntraSpark1.0-01.png";
+
+import { MyContext } from "../Layout/MainLayout";
 import Button from "./Button";
 // import image from "../assets/home/istockphoto-1339294539-612x612-removebg-preview.png";
 const About = () => {
+  const { isDeadlineOpen } = useContext(MyContext);
+  console.log(isDeadlineOpen);
   const [isExpanded, setIsExpanded] = useState(false);
   return (
     <>
       <div className="text-gray-300 ">
-        <div className="flex justify-center items-center mt-16">
+        <div className="text-center">
+          {isDeadlineOpen ? (
+            <span className="text-2xl font-bold text-center mt-6">
+              Registration is Ongoing...
+            </span>
+          ) : (
+            <span className="text-2xl font-bold text-center">
+              Registration has ended!!
+            </span>
+          )}
+        </div>
+        <div className="flex justify-center items-center mt-6">
           {/* <div className="w-[30vw]"><img src={image} alt="" /></div> */}
           <div className="w-11/12 mx-auto text-justify">
             <div className="">
@@ -26,7 +41,7 @@ const About = () => {
                 Through its carefully curated event structure, the competition
                 offers a diverse experience, inviting participants to unveil
                 pioneering projects across a broad spectrum of technological
-                domains. The
+                domains. Our segments are:
               </p>
             </div>
             {isExpanded && (
@@ -41,10 +56,10 @@ const About = () => {
                   <br />
                   (ii) Line Follower Robot,
                   <br /> (iii) Soccer Bot, <br />
-                  (iv) Arduino Programming Hackathon, and <br /> (v) Truss
-                  Challenge provide platforms for participants to showcase
-                  expertise and creativity. <br /> Together, IntraSpark 1.0
-                  fosters a culture of collaboration, innovation, and
+                  {/* (iv) Arduino Programming Hackathon, and <br />  */}
+                  (v) Truss Challenge provide platforms for participants to
+                  showcase expertise and creativity. <br /> Together, IntraSpark
+                  1.0 fosters a culture of collaboration, innovation, and
                   technological exploration, empowering participants to push
                   boundaries and pioneer solutions that shape the future of
                   technology.
@@ -99,7 +114,7 @@ const About = () => {
 
         <img className="h-36 mx-auto" src={logo} alt="IntraSpark Logo" />
         <div className="flex justify-center items-center">
-          <Link>
+          <Link to="/register">
             <Button></Button>
           </Link>
         </div>

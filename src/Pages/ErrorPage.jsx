@@ -1,8 +1,46 @@
+import Lottie from "lottie-react";
+import { Link, useRouteError } from "react-router-dom";
+import errorLottie from "../assets/Animation - 1708929937052.json";
 const ErrorPage = () => {
+  const { error, status } = useRouteError();
   return (
-    <div>
-      <h1>This is ErrorPage component</h1>
-    </div>
+    <section className="flex flex-col lg:flex-row items-center h-auto lg:h-screen p-4 lg:p-16 bg-emerald-50 text-gray-900">
+      <div className="container items-center justify-center px-5 mx-auto my-8 flex flex-col lg:flex-row bg-wrap border-4 border-emerald-800/50 py-20 w-9/12">
+        <div
+          data-aos="zoom-in-up"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          className="mb-4 lg:mb-0 lg:ms-20">
+          <Lottie
+            className="w-1/2 mx-auto lg:w-3/4"
+            animationData={errorLottie}
+            loop={true}
+          />
+        </div>
+
+        <div
+          data-aos="zoom-in-up"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          className="text-center lg:w-1/2">
+          <h2 className="mb-4 font-extrabold text-4xl lg:text-7xl text-emerald-500">
+            <span className="sr-only">Error</span> {status || 404}
+          </h2>
+          <p className="text-xl lg:text-3xl mb-4 text-emerald-600 font-semibold">
+            {error?.message}
+          </p>
+          <Link
+            to="/"
+            className="px-6 py-2 lg:px-8 lg:py-3 font-semibold rounded bg-emerald-500 hover:bg-emerald-600 text-gray-900">
+            Back to homepage
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 };
 
