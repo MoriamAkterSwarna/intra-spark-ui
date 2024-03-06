@@ -2,6 +2,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useContext, useEffect, useState } from "react";
+import { ScrollRestoration } from "react-router-dom";
 import { MyContext } from "../Layout/MainLayout";
 import logoImg from "../assets/home/Logo_IntraSpark1.0-01.png";
 // import rotateImg from "../assets/home/output-onlinegiftools.gif";
@@ -87,6 +88,7 @@ const Banner = () => {
     // </div>
     // <MyContext.Provider value={{ isDeadlineOpen, deadLines, setDeadLines }}>
     <div className="banner-section h-[90vh] md:h-[100vh] lg:h-[90vh] w-full md:mb-10 pt-[10%] md:pt-[7%] lg:pt-5">
+      <ScrollRestoration />
       <div className="relative">
         {/* <img
           className="absolute md:top-0 lg:top-8 left-[10%] md:left-[15%] lg:-left-6 w-96 md:w-auto object-cover"

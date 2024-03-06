@@ -40,14 +40,7 @@ const NavBar = () => {
                 Home
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/about"
-                title="About"
-                className={({ isActive }) => (isActive ? "active" : "default")}>
-                About
-              </NavLink>
-            </li>
+
             <li>
               <NavLink
                 to="/noticeBoard"
@@ -62,6 +55,14 @@ const NavBar = () => {
                 title="Guest"
                 className={({ isActive }) => (isActive ? "active" : "default")}>
                 Guest
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/about"
+                title="About"
+                className={({ isActive }) => (isActive ? "active" : "default")}>
+                About
               </NavLink>
             </li>
           </ul>
@@ -134,16 +135,7 @@ const NavBar = () => {
                         Home
                       </NavLink>
                     </li>
-                    <li>
-                      <NavLink
-                        to="/about"
-                        title="About"
-                        className={({ isActive }) =>
-                          isActive ? "active" : "default text-black"
-                        }>
-                        About
-                      </NavLink>
-                    </li>
+
                     <li>
                       <NavLink
                         to="/noticeBoard"
@@ -162,6 +154,16 @@ const NavBar = () => {
                           isActive ? "active" : "default text-black"
                         }>
                         Guest
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        to="/about"
+                        title="About"
+                        className={({ isActive }) =>
+                          isActive ? "active" : "default text-black"
+                        }>
+                        About
                       </NavLink>
                     </li>
                     <li>

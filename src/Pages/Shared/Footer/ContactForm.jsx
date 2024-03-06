@@ -1,25 +1,28 @@
+import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const ContactForm = () => {
   const form = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // emailjs
-    //   .sendForm(
-    //     "service_zzvhufj",
-    //     "template_fcuokhl",
-    //     form.current,
-    //     "W7jPBdlhtE8V0jDOA"
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       toast.success("Feedback Sent!");
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //     }
-    //   );
+    emailjs
+      .sendForm(
+        "service_b1yo3ty",
+        "template_dd7zcrk",
+        form.current,
+        "VM_zoAP9hd8QdhIha"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success("Feedback Sent!");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -42,7 +45,7 @@ const ContactForm = () => {
             type="email"
             name="from_email"
             placeholder="Email"
-            className="input  bg-gray-950 border-emerald-900 border-2 focus:outline-2 focus:outline-emerald-800"
+            className="input  bg-gray-950 border-emerald-900 border-2 focus:outline-2 focus:outline-emerald-800 focus:bg-gray-950"
             required
           />
         </div>
@@ -62,6 +65,7 @@ const ContactForm = () => {
           />
         </div>
       </form>
+      <ToastContainer />
     </div>
   );
 };
