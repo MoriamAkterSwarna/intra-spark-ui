@@ -1,78 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@200;300;400;700;900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: "Merriweather", serif;
-  /* font-style: normal; */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.active {
-  @apply font-medium tracking-wide text-emerald-700 transition-colors duration-200 hover:text-orange-400 mr-2;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-.default {
-  @apply font-medium tracking-wide text-white transition-colors duration-200 hover:text-orange-600 mr-2;
-}
-.banner-section {
-  background-image: url("./assets/home/robot-hand-finger-ai-background-technology-graphics.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /* height: 90vh; */
-  object-fit: cover;
-  /* opacity: 70%; */
-  filter: brightness(0.9);
-  z-index: -1;
-  /* mix-blend-mode: darken luminosity; */
-  background-color: rgba(0, 0, 0, 0.3);
-  background-blend-mode: darken;
-}
-/* .bg-wrap {
-  background: rgba(58, 22, 216, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(18, 23, 102, 0.37);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;
-  
-/* }  */
-
-.bg-wrap {
-  background: rgba(18, 167, 18, 0.359); /* Green background */
-  box-shadow: 0 8px 32px 0 rgba(0, 128, 0, 0.37); /* Green box-shadow */
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 10px;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-.segments-bg {
-  background-color: rgba(0, 0, 0, 0.3);
-  background-blend-mode: darken;
+::-webkit-scrollbar-thumb {
+  background: #e5a5b5;
+  border-radius: 3px;
 }
 
-.segment {
-  animation: float 5s ease-in-out infinite;
-}
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.fixed-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #161010;
-  z-index: 15;
-  transition: 1.5s;
-  border-bottom: 2px solid #09614f;
+::-webkit-scrollbar-thumb:hover {
+  background: #f43f5e;
 }
